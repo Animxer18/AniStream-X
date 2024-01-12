@@ -2,7 +2,7 @@
 const errorContainer = document.createElement("div");
 errorContainer.style.color = "red";
 
-fetch('https://api.consumet.org/anime/gogoanime/top-airing')
+fetch('https://animxer-api-phi.vercel.app/anime/gogoanime/top-airing')
     .then(response => response.json())
     .then(data => {
         var cardDiv = document.getElementById("card");
@@ -56,7 +56,7 @@ const debouncedInput = debounce(function (event) {
 
     const query = document.querySelector("#query").value;
 
-    fetch('https://api.consumet.org/anime/gogoanime/' + query)
+    fetch('https://animxer-api-phi.vercel.app/anime/gogoanime/' + query)
         .then(response => response.json())
         .then(data => {
             data.results.slice(0, 4).forEach(result => {
