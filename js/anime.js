@@ -8,7 +8,7 @@ var id = url.searchParams.get("id");
 const errorContainer = document.createElement("div");
 errorContainer.style.color = "red";
 
-fetch('https://animxer-api-phi.vercel.app/anime/gogoanime/info/' + id)
+fetch('https://animxer-api-cvxg.vercel.app/anime/gogoanime/info/' + id)
     .then(response => response.json())
     .then(data => {
         const anime = data;
@@ -74,7 +74,7 @@ const debouncedInput = debounce(function (event) {
 
     const query = document.querySelector("#query").value;
 
-    fetch('https://animxer-api-phi.vercel.app/anime/gogoanime/' + query)
+    fetch('https://animxer-api-cvxg.vercel.app/anime/gogoanime/' + query)
         .then(response => response.json())
         .then(data => {
             data.results.slice(0, 4).forEach(result => {
