@@ -7,7 +7,7 @@ var id = url.searchParams.get("id");
 var no = url.searchParams.get("no");
 
 //Code which fetches API and displays info and other stuff
-fetch('https://api.consumet.org/anime/gogoanime/info/'+ id)
+fetch('https://animxer-api-phi.vercel.app/anime/gogoanime/info/'+ id)
 .then(response => response.json())
 .then(data =>  {
     const anime = data;
@@ -28,7 +28,7 @@ fetch('https://api.consumet.org/anime/gogoanime/info/'+ id)
     document.getElementById('info').appendChild(sideDataDiv);
     document.title = "Watch " + anime.title + ' ' + 'Episode '+ no + '- AniStream';
 
-fetch('https://api.consumet.org/anime/gogoanime/info/'+ id)
+fetch('https://animxer-api-phi.vercel.app/anime/gogoanime/info/'+ id)
     .then(response => response.json())
     .then(data => {
   const episodesDiv = document.getElementById("episodesw");
@@ -44,7 +44,7 @@ fetch('https://api.consumet.org/anime/gogoanime/info/'+ id)
   });
 
      
-  fetch('https://api.consumet.org/anime/gogoanime/watch/'+ ep)
+  fetch('https://animxer-api-phi.vercel.app/anime/gogoanime/watch/'+ ep)
 .then(response => response.json())
 .then(data => {
     
@@ -88,7 +88,7 @@ const debouncedInput = debounce(function(event) {
 
   const query = document.querySelector("#query").value;
 
-  fetch('https://api.consumet.org/anime/gogoanime/'+ query)
+  fetch('https://animxer-api-phi.vercel.app/anime/gogoanime/'+ query)
     .then(response => response.json())
     .then(data => {
       data.results.slice(0,4).forEach(result => {
