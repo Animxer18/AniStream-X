@@ -11,7 +11,7 @@ let showingResultsForDisplayed = false;
 const errorContainer = document.createElement("div");
 errorContainer.style.color = "red";
 
-fetch('https://animxer-api-phi.vercel.app/anime/gogoanime/' + query)
+fetch('https://animxer-api-cvxg.vercel.app/anime/gogoanime/' + query)
     .then(response => response.json())
     .then(data => {
         var cardDiv = document.getElementById("card");
